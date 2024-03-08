@@ -18,6 +18,12 @@ Inbuilt_optim.m
 
 : uses a free-body diagram approach to calculate a symbolic expression of the transfer function for the model of a train suspension system. This is evaluated using "inbuilt_optim_H2.m", and then passed to an interior point optimisation scheme to optimise the H2 norm.
 
-Train_Graph_Functions_Timing.m
+Train_Graph_TF.m
 
-: follows the same example as above, using the functions combine_edge.m, combine_vertices.m and sum_admittance_products.m to determine the transfer function only, and times how long MATLAB takes to execute the code, averaged over 1000 runs.
+: follows the same example as above, using the functions combine_edge.m, combine_vertices.m and sum_admittance_products.m to determine the transfer function only, and times how long MATLAB takes to execute the code.
+
+H2Norm_Optim_Timing_with_TF.m
+
+: embeds the algorithm for determining a transfer function into the method for calculating the H2 norm symbolically from the coefficients in the transfer function. This is embedded within an interior point optimisation scheme, and timed.
+
+The results in the paper come from the scripts H2Norm_Optim_Timing_with_TF.m and Inbuilt_optim.m.
